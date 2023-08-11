@@ -4,7 +4,7 @@ const loginPage = require('./elements').elements
 
 class LoginPage{
     acessPage(){
-        cy.visit("https://automationexercise.com/signup")
+        cy.visit("https://automationexercise.com/login")
     }
 
     acessLoginPage(){

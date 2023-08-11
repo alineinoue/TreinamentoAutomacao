@@ -1,10 +1,24 @@
 export const elements = {
     signupName: '[data-qa="signup-name"]',
-    signupEmail: '[data-qa="signup-name"]',
-    signupButton: '[data-qa="signup-button"]'
-}
-
-export const elementsSignup = {
-    genderRadio: '#id_gender2',
-    
+    signupEmail: '[data-qa="signup-email"]',
+    signupButton: '[data-qa="signup-button"]',
+    genderRadioF: '#id_gender2',
+    genderRadioM: '#id_gender1',
+    passwordInput: '#password',
+    daySelect: '#days',
+    monthSelect: '#months',
+    yearSelect: '#years',
+    newsletterSelect: '#newsletter',
+    optinSelect: '#optin',
+    firstName: '#first_name',
+    lastName: '#last_name',
+    companyName: '#company',
+    address1Name: '#address1',
+    address2Name: '#address2',
+    countrySelect: '#country',
+    stateInput: '#state',
+    cityInput: '#city',
+    zipcodeInput: '#zipcode',
+    mobileNumberInput: '#mobile_number',
+    registerButton: '[data-qa="create-account"]'
 }

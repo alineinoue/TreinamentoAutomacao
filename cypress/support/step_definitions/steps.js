@@ -2,6 +2,8 @@ import {Before, Given, When, And, Then} from "cypress-cucumber-preprocessor/step
 import LoginPage from "../../support/pages/Login/index"
 import SubmitPage from "../../support/pages/Signup/index"
 
+//Feature: Login
+
 Given("acessar homepage", () => {
     LoginPage.acessPage()
 });
@@ -20,15 +22,22 @@ Then("mensagem de erro deve ser exibida", () => {
     LoginPage.validateMsg()
 });
 
-//Cadastro usuário
+//Feature: Signup
 
 Given("acessar homepage", () => {
-    SubmitPage.acessPage()
+    SubmitPage.acessLoginPage()
+});
+
+When("preencher os campos obrigatórios", () => {
     SubmitPage.fillFields()
     SubmitPage.submitLogin()
 });
 
-When("preencher campos obrigatórios", () => {
-    
-});
+And("cadastrar um usuário", () => {
+    SubmitPage.registerUser()
+})
+
+Then("usuário deve ser cadastrado", () => {
+    cy.url().should('be.equal', 'https://automationexercise.com/account_created')
+})
 
